@@ -1,0 +1,124 @@
+info:
+  contact: {}
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: 这是一个首页的API
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 首页
+      tags:
+      - 首页
+  /user/create:
+    post:
+      description: 新增用户接口
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        type: string
+      - description: 用户密码
+        in: formData
+        name: password
+        type: string
+      - description: 确认密码
+        in: formData
+        name: repassword
+        type: string
+      - description: 电话号码
+        in: formData
+        name: phone
+        type: string
+      - description: 邮箱
+        in: formData
+        name: email
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 新增用户
+      tags:
+      - 用户模块
+  /user/delete/:id:
+    delete:
+      description: 删除用户接口
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 删除用户
+      tags:
+      - 用户模块
+  /user/list:
+    get:
+      description: 获取用户列表接口
+      responses:
+        "200":
+          description: code","data"}
+          schema:
+            type: string
+      summary: 用户列表
+      tags:
+      - 用户模块
+  /user/login:
+    post:
+      description: 用户登录接口
+      parameters:
+      - description: 用户名
+        in: formData
+        name: username
+        type: string
+      - description: 用户密码
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code","message","data"}
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - 用户模块
+  /user/update:
+    put:
+      description: 修改用户接口
+      parameters:
+      - description: 用户ID
+        in: formData
+        name: id
+        required: true
+        type: integer
+      - description: 用户名称
+        in: formData
+        name: username
+        type: string
+      - description: 用户密码
+        in: formData
+        name: password
+        type: string
+      - description: 电话号码
+        in: formData
+        name: phone
+        type: string
+      - description: 邮箱
+        in: formData
+        name: email
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 修改用户
+      tags:
+      - 用户模块
+swagger: "2.0"
