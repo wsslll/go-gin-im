@@ -22,6 +22,7 @@ require (
 	golang.org/x/crypto v0.7.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
 	google.golang.org/protobuf v1.29.0 // indirect
+	gopkg.in/fatih/set.v0 v0.2.1 // indirect
 	gorm.io/driver/mysql v1.4.7
 	gorm.io/gorm v1.24.6
 )
